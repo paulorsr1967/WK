@@ -1,0 +1,67 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object pTitulo: TPanel
+    Align = Top
+    Size.Width = 640.000000000000000000
+    Size.Height = 49.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    TabStop = False
+    object lTitulo: TLabel
+      Align = Center
+      AutoSize = True
+      StyledSettings = [Family]
+      Size.Width = 157.000000000000000000
+      Size.Height = 27.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 20.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claBlue
+      Text = 'Teste - Pedidos'
+      TabOrder = 0
+    end
+  end
+  object gbCliente: TGroupBox
+    Align = Top
+    Position.Y = 49.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 60.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Cliente'
+    TabOrder = 1
+  end
+  object gbProduto: TGroupBox
+    Align = Top
+    Position.Y = 109.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 60.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Produto'
+    TabOrder = 2
+  end
+  object gbRodape: TGroupBox
+    Align = Bottom
+    Position.Y = 420.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 60.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Rodap'#233
+    TabOrder = 4
+  end
+  object gbItens: TGroupBox
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 251.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Itens'
+    TabOrder = 3
+  end
+end
