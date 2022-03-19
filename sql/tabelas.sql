@@ -1,6 +1,6 @@
-CREATE USER `wk`@`localhost` IDENTIFIED BY 'wk';
+CREATE USER `wk2`@`localhost` IDENTIFIED BY 'technology';
 
-GRANT all ON `wk`.* TO `wk`@`localhost`;
+GRANT ALL PRIVILEGES ON `wk`.* TO `wk2`@`localhost`;
 
 CREATE TABLE `wk`.`clientes`  (
   `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -21,8 +21,8 @@ CREATE TABLE `wk`.`produtos` (
 CREATE TABLE `wk`.`pedidos`  (
   `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
   `cliente_id` bigint UNSIGNED NOT NULL,
-  `emissao` datetime NOT NULL DEFAULT current_timestamp(0),
-  `total` decimal(18, 2) NOT NULL,
+  `data_emissao` datetime NOT NULL DEFAULT current_timestamp(0),
+  `valor_total` decimal(18, 2) NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `ix_cliente_id`(`cliente_id`, `id`),
   CONSTRAINT `fk_clientes_id` FOREIGN KEY (`cliente_id`) REFERENCES `wk`.`clientes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE

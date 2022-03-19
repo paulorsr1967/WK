@@ -266,9 +266,12 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="view\UnitPrincipal_fmx.pas">
-            <Form>Form1</Form>
+            <Form>frmPrincipal</Form>
             <FormType>fmx</FormType>
         </DCCReference>
+        <DCCReference Include="model\Cliente.pas"/>
+        <DCCReference Include="model\Produto.pas"/>
+        <DCCReference Include="model\Pedido.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

@@ -1,16 +1,16 @@
-object Form1: TForm1
+object frmPrincipal: TfrmPrincipal
   Left = 0
   Top = 0
-  Caption = 'Form1'
+  Caption = 'Teste - cadastro de Pedidos'
   ClientHeight = 480
-  ClientWidth = 640
+  ClientWidth = 769
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   DesignerMasterStyle = 0
   object pTitulo: TPanel
     Align = Top
-    Size.Width = 640.000000000000000000
+    Size.Width = 769.000000000000000000
     Size.Height = 49.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
@@ -19,49 +19,147 @@ object Form1: TForm1
       Align = Center
       AutoSize = True
       StyledSettings = [Family]
-      Size.Width = 157.000000000000000000
+      Size.Width = 260.000000000000000000
       Size.Height = 27.000000000000000000
       Size.PlatformDefault = False
       TextSettings.Font.Size = 20.000000000000000000
       TextSettings.Font.StyleExt = {00070000000000000004000000}
       TextSettings.FontColor = claBlue
-      Text = 'Teste - Pedidos'
+      Text = 'Teste - Cadastro de Pedidos'
       TabOrder = 0
     end
   end
   object gbCliente: TGroupBox
     Align = Top
+    Padding.Left = 10.000000000000000000
+    Padding.Top = 15.000000000000000000
+    Padding.Right = 10.000000000000000000
+    Padding.Bottom = 5.000000000000000000
     Position.Y = 49.000000000000000000
-    Size.Width = 640.000000000000000000
+    Size.Width = 769.000000000000000000
     Size.Height = 60.000000000000000000
     Size.PlatformDefault = False
     Text = 'Cliente'
     TabOrder = 1
+    object eCliente: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Left
+      StyleLookup = 'editstyle'
+      TabOrder = 38
+      KeyboardType = NumberPad
+      MaxLength = 3
+      Position.X = 10.000000000000000000
+      Position.Y = 15.000000000000000000
+      Padding.Left = 10.000000000000000000
+      Padding.Top = 15.000000000000000000
+      Padding.Right = 10.000000000000000000
+      Padding.Bottom = 5.000000000000000000
+      Size.Width = 61.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = eClienteChange
+    end
+    object lCliente: TLabel
+      Align = Left
+      Position.X = 71.000000000000000000
+      Position.Y = 15.000000000000000000
+      Size.Width = 378.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 39
+    end
   end
   object gbProduto: TGroupBox
     Align = Top
-    Position.Y = 109.000000000000000000
-    Size.Width = 640.000000000000000000
+    Padding.Left = 10.000000000000000000
+    Padding.Top = 15.000000000000000000
+    Padding.Right = 10.000000000000000000
+    Padding.Bottom = 5.000000000000000000
+    Position.Y = 169.000000000000000000
+    Size.Width = 769.000000000000000000
     Size.Height = 60.000000000000000000
     Size.PlatformDefault = False
     Text = 'Produto'
-    TabOrder = 2
+    TabOrder = 3
+    object eProduto: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Left
+      StyleLookup = 'editstyle'
+      TabOrder = 38
+      KeyboardType = NumberPad
+      MaxLength = 3
+      Position.X = 10.000000000000000000
+      Position.Y = 15.000000000000000000
+      Padding.Left = 10.000000000000000000
+      Padding.Top = 15.000000000000000000
+      Padding.Right = 10.000000000000000000
+      Padding.Bottom = 5.000000000000000000
+      Size.Width = 61.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object lProduto: TLabel
+      Align = Client
+      Size.Width = 464.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 39
+    end
+    object eQuantidade: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Right
+      TabOrder = 41
+      Position.X = 535.000000000000000000
+      Position.Y = 15.000000000000000000
+      Size.Width = 72.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object ePreco: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Right
+      TabOrder = 40
+      Position.X = 607.000000000000000000
+      Position.Y = 15.000000000000000000
+      Size.Width = 72.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object bConfirmarProduto: TButton
+      Align = Right
+      Position.X = 679.000000000000000000
+      Position.Y = 15.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 42
+      Text = 'Confirmar'
+    end
   end
   object gbRodape: TGroupBox
     Align = Bottom
     Position.Y = 420.000000000000000000
-    Size.Width = 640.000000000000000000
+    Size.Width = 769.000000000000000000
     Size.Height = 60.000000000000000000
     Size.PlatformDefault = False
     Text = 'Rodap'#233
-    TabOrder = 4
+    TabOrder = 5
   end
   object gbItens: TGroupBox
     Align = Client
-    Size.Width = 640.000000000000000000
-    Size.Height = 251.000000000000000000
+    Size.Width = 769.000000000000000000
+    Size.Height = 191.000000000000000000
     Size.PlatformDefault = False
     Text = 'Itens'
-    TabOrder = 3
+    TabOrder = 4
+  end
+  object gbPedido: TGroupBox
+    Align = Top
+    Position.Y = 109.000000000000000000
+    Size.Width = 769.000000000000000000
+    Size.Height = 60.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Pedido'
+    TabOrder = 2
   end
 end
